@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>UPCST Final Application - JalRakshak AI</title>
+<style>
+  @page {
+    size: A4;
+    margin: 20mm 18mm 20mm 18mm;
+  }
+
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 11pt;
+    line-height: 1.48;
+    color: #111111;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1.doc-title {
+    font-size: 20pt;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #0b2545;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  h2.section-header {
+    font-size: 13.5pt;
+    font-weight: bold;
+    color: #0b2545;
+    border-bottom: 1.5px solid #0b2545;
+    padding-bottom: 3px;
+    margin-top: 22px;
+    margin-bottom: 10px;
+  }
+
+  h3.subsection-header {
+    font-size: 11.5pt;
+    font-weight: bold;
+    color: #134074;
+    margin-top: 12px;
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 6pt;
+    text-align: justify;
+  }
+
+  ul, ol {
+    margin-top: 0;
+    margin-bottom: 8pt;
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 4pt;
+    text-align: justify;
+  }
+
+  .page-break {
+    page-break-after: always;
+  }
+
+  table.toc-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+    margin-bottom: 25px;
+  }
+
+  table.toc-table th, table.toc-table td {
+    border: 1px solid #555555;
+    padding: 8px 11px;
+    text-align: left;
+  }
+
+  table.toc-table th {
+    background-color: #eef4f8;
+    color: #0b2545;
+    font-weight: bold;
+  }
+
+  table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 10pt;
+  }
+
+  table.data-table th, table.data-table td {
+    border: 1px solid #888888;
+    padding: 6px 9px;
+    text-align: left;
+  }
+
+  table.data-table th {
+    background-color: #f0f4f8;
+    color: #0b2545;
+    font-weight: bold;
+  }
+
+  .highlight-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #0b2545;
+    padding: 9px 13px;
+    margin: 10px 0;
+    font-size: 10.5pt;
+  }
+
+  .warning-box {
+    background-color: #fff9e6;
+    border-left: 4px solid #d97706;
+    padding: 9px 13px;
+    margin: 10px 0;
+    font-size: 10.5pt;
+  }
+
+  .formula-box {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11pt;
+    font-weight: bold;
+    padding: 8px 12px;
+    background-color: #f0f4f8;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    margin: 10px 0;
+    color: #0f172a;
+  }
+
+  .agent-box {
+    page-break-inside: avoid;
+    background-color: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-left: 5px solid #0284c7;
+    border-radius: 5px;
+    padding: 9px 12px;
+    margin: 10px 0;
+    font-size: 10pt;
+  }
+
+  .image-container {
+    text-align: center;
+    margin: 14px 0;
+  }
+
+  .image-container img {
+    max-width: 95%;
+    height: auto;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+  }
+
+  .caption {
+    font-size: 9.5pt;
+    font-style: italic;
+    color: #555555;
+    margin-top: 5px;
+  }
+
+  .header-meta {
+    text-align: center;
+    font-size: 10pt;
+    color: #444;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: COVER & TABLE OF CONTENTS -->
+<div class="header-meta">
+  <strong>COUNCIL OF SCIENCE AND TECHNOLOGY, UTTAR PRADESH (CST UP)</strong><br>
+  Engineering Students Project Grant Scheme | Detailed Project Proposal
+</div>
+
+<h1 class="doc-title">Table of Contents</h1>
+
+<table class="toc-table">
+  <thead>
+    <tr>
+      <th style="width: 12%; text-align: center;">S.No.</th>
+      <th style="width: 73%;">Section</th>
+      <th style="width: 15%; text-align: center;">Page No.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center;">1</td>
+      <td><strong>Title of the Project</strong></td>
+      <td style="text-align: center;">2</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">2</td>
+      <td><strong>Introduction / Background</strong></td>
+      <td style="text-align: center;">2</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">3</td>
+      <td><strong>Problem Statement</strong></td>
+      <td style="text-align: center;">3</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">4</td>
+      <td><strong>Objectives</strong></td>
+      <td style="text-align: center;">4</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">5</td>
+      <td><strong>Scope of the Project</strong></td>
+      <td style="text-align: center;">5</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">6</td>
+      <td><strong>Modules of the Project & System Workflow</strong></td>
+      <td style="text-align: center;">6</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">7</td>
+      <td><strong>Verification, Calibration & Remediation Mechanism</strong></td>
+      <td style="text-align: center;">7</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">8</td>
+      <td><strong>System Flow Diagram / Working of the Project</strong></td>
+      <td style="text-align: center;">8</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">9</td>
+      <td><strong>Tools and Technologies Used</strong></td>
+      <td style="text-align: center;">9</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">10</td>
+      <td><strong>Advantages / Expected Outcomes</strong></td>
+      <td style="text-align: center;">10</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">11</td>
+      <td><strong>Conclusion</strong></td>
+      <td style="text-align: center;">11</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="highlight-box">
+  <strong>Applicant Information:</strong><br>
+  <strong>Principal Student Investigator:</strong> Saurabh Kumar (Roll No: 2305010100045, College ID: BCS23014)<br>
+  <strong>Department & Institution:</strong> Department of Computer Science & Engineering, R V Institute of Technology, Bijnor (AKTU Code: 501)<br>
+  <strong>Thrust Area Alignment:</strong> Environmental Science, IoT Healthcare & Applied Artificial Intelligence
+</div>
+
+<div class="page-break"></div>
+
+<!-- PAGE 2: TITLE & INTRODUCTION -->
+<h2 class="section-header">1. Title of the Project</h2>
+<p style="font-size: 13.5pt; font-weight: bold; color: #0b2545; text-align: left; margin-bottom: 18px;">
+  JalRakshak AI (जल रक्षक) – Edge IoT Drinking Water Quality Monitoring & Multilingual AI Governance System for Rural Uttar Pradesh
+</p>
+
+<h2 class="section-header">2. Introduction / Background</h2>
+<p>
+  Access to safe, potable drinking water is a fundamental prerequisite for human health, socioeconomic development, and rural prosperity. In Uttar Pradesh, particularly across the Gangetic plains and eastern agricultural belts (such as Bijnor, Moradabad, Varanasi, Ballia, Gorakhpur, and Prayagraj), more than 85% of rural communities depend directly on groundwater extracted through shallow handpumps, community tube-wells, and unlined open borewells.
+</p>
+<p>
+  While national and state initiatives like the Jal Jeevan Mission have substantially expanded piped water supply infrastructure, millions of decentralized rural water sources remain untested for extended periods. Water quality in alluvial aquifer systems fluctuates dynamically due to agricultural fertilizer runoff, seasonal monsoon flooding, industrial effluents, and leaching from unpaved sanitation pits. 
+</p>
+<p>
+  Presently, water testing relies almost exclusively on manual collection of grab samples transported to centralized district laboratories. This legacy methodology is resource-intensive, suffers from turnaround delays ranging from weeks to months, and fails to provide actionable, immediate feedback to the rural citizen standing at the water source. Furthermore, even when laboratory reports are published, the technical metrics (such as pH levels, Total Dissolved Solids in parts-per-million, and Nephelometric Turbidity Units) are incomprehensible to non-technical rural residents who cannot translate abstract numbers into everyday safety judgments.
+</p>
+<p>
+  <strong>JalRakshak AI</strong> addresses this critical technological gap by combining low-cost edge sensing hardware with modern full-stack cloud data telemetry and a vernacular Conversational AI Agent. The system deploys an intelligent, portable IoT unit based on the ESP32 microcontroller, integrated with precision analog probes for pH, Total Dissolved Solids (TDS), optical turbidity, and water temperature. 
+</p>
+<p>
+  The edge device instantly performs local safety screening and provides visual and auditory alerts in simple Hindi. Simultaneously, readings are transmitted over secure REST APIs to a Node.js/Express cloud backend and MongoDB database. A specialized AI Agent powered by frontier Large Language Models (LLMs) analyzes real-time and historical telemetry to offer voice-guided rural remediation advice and automated escalation alerts to Gram Panchayats and Jal Nigam officials.
+</p>
+
+<div class="page-break"></div>
+
+<!-- PAGE 3: PROBLEM STATEMENT -->
+<h2 class="section-header">3. Problem Statement</h2>
+<p>
+  The prevailing drinking water safety framework across rural Uttar Pradesh faces several acute bottlenecks:
+</p>
+<ul>
+  <li>
+    <strong>Lack of Decentralized, Real-Time Screening:</strong> Groundwater contamination is localized and transient. Contamination events caused by agricultural leaching or pipe breaches cannot be detected by annual or semi-annual laboratory testing schedules. Villagers continue consuming hazardous water for months before a contamination outbreak is officially identified.
+  </li>
+  <li>
+    <strong>Severe Cognitive & Linguistic Barriers:</strong> Water test outputs are universally rendered in technical English laboratory formats. Rural citizens do not understand whether a TDS of 750 ppm or a pH of 8.8 is safe for infant consumption, or whether boiling the water resolves the issue (boiling kills microbes but actually concentrates dissolved solids).
+  </li>
+  <li>
+    <strong>Lack of Automated Village-Level Governance Telemetry:</strong> District administration and Jal Nigam engineers lack automated, granular data streams that highlight micro-clusters of groundwater deterioration in real time, preventing proactive preventative interventions.
+  </li>
+</ul>
+
+<div class="warning-box">
+  <strong>Explicit Operational Boundary & Scientific Disclaimer:</strong><br>
+  Low-cost physical and optical sensors deployed on edge microcontrollers cannot detect toxic heavy metals or trace molecular contaminants such as <strong>Arsenic (As), Fluoride (F⁻), Lead (Pb), or pesticide residues</strong>, which require specialized mass spectrometry or spectrophotometric reagents in certified laboratories.<br><br>
+  <strong>JalRakshak AI</strong> is rigorously engineered as a <strong>first-line screening and early-warning monitoring system</strong> for primary physicochemical water quality indicators (pH, Total Dissolved Solids, Turbidity, and Temperature). It alerts communities to immediate physical and organic contamination while automatically flagging suspicious anomalies for formal district laboratory verification.
+</div>
+
+<p>
+  Therefore, there is an urgent societal need for a low-cost, portable, and bilingual IoT diagnostic system that democratizes water quality awareness, provides clear vernacular remediation instructions, and feeds automated surveillance data to state governance bodies.
+</p>
+
+<div class="page-break"></div>
+
+<!-- PAGE 4: OBJECTIVES -->
+<h2 class="section-header">4. Objectives</h2>
+<p>
+  The primary technical and societal objectives of the <strong>JalRakshak AI</strong> project are:
+</p>
+<ol>
+  <li>
+    <strong>Design & Fabricate a Low-Cost Portable IoT Edge Node:</strong> Develop a robust, handheld, battery-powered testing device using the 32-bit dual-core ESP32 microcontroller housed in a splash-resistant 3D-printed enclosure under a total hardware budget of under ₹4,000.
+  </li>
+  <li>
+    <strong>Multi-Parameter Physicochemical Sensing:</strong> Integrate and calibrate four core sensors:
+    <ul>
+      <li>Glass electrode analog pH sensor probe (0 to 14 pH).</li>
+      <li>Electrolytic conductivity-based Total Dissolved Solids (TDS) sensor (0 to 1000 ppm).</li>
+      <li>Optical phototransistor turbidity sensor (0 to 3000 NTU).</li>
+      <li>Waterproof DS18B20 digital temperature sensor for active mathematical temperature compensation.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Immediate Vernacular Feedback at the Water Source:</strong> Implement on-device edge classification based on Bureau of Indian Standards (BIS IS 10500:2012) drinking water guidelines, displaying visual safety indicators on a 0.96-inch OLED display (e.g., <em>"जल सुरक्षित है"</em> vs. <em>"असुरक्षित / पिएं मत"</em>) and triggering audio warnings.
+  </li>
+  <li>
+    <strong>Develop a Resilient Cloud Telemetry Architecture:</strong> Engineer a secure REST API backend using Node.js and Express.js, coupled with a MongoDB NoSQL database to store structured time-series sensor readings, location coordinates, and water quality indices.
+  </li>
+  <li>
+    <strong>Build a Multilingual Conversational AI Agent:</strong> Incorporate an LLM-based intelligent agent equipped with native function-calling tools that interprets sensor data, answers questions in conversational rural Hindi/English, and advises citizens on safe, practical local water treatment methods (e.g., alum coagulation, chlorination, solar disinfection).
+  </li>
+  <li>
+    <strong>Deploy an Interactive Governance Dashboard:</strong> Provide district authorities and Jal Nigam engineers with a real-time web portal featuring GIS-based geospatial heatmaps, contamination alert logs, and predictive trend analysis.
+  </li>
+</ol>
+
+<div class="page-break"></div>
+
+<!-- PAGE 5: SCOPE OF THE PROJECT -->
+<h2 class="section-header">5. Scope of the Project</h2>
+<p>
+  The project encompasses a comprehensive lifecycle from embedded hardware design to field deployment and cloud software engineering:
+</p>
+
+<h3 class="subsection-header">5.1 Target Geographic & Demographic Scope</h3>
+<ul>
+  <li>
+    <strong>Deployment Environment:</strong> Rural and peri-urban villages across Uttar Pradesh, prioritizing the Gangetic alluvial belt (e.g., Bijnor, Moradabad, Meerut, and eastern districts).
+  </li>
+  <li>
+    <strong>Beneficiaries:</strong> Rural households, village schools, Anganwadi centers, Gram Panchayats, and field-level Accredited Social Health Activists (ASHA) / Jal Bandhu volunteers.
+  </li>
+</ul>
+
+<h3 class="subsection-header">5.2 Technical & Functional Scope</h3>
+<ul>
+  <li>
+    <strong>Edge Computing & Calibration:</strong> Real-time ADC sampling, digital filtering, and non-linear polynomial calibration for sensor drift compensation.
+  </li>
+  <li>
+    <strong>Offline Data Caching:</strong> Implementation of SPIFFS / LittleFS flash storage on the ESP32 to retain sensor readings in areas without immediate cellular coverage, with automated burst synchronization upon network discovery.
+  </li>
+  <li>
+    <strong>Cloud Platform:</strong> End-to-end MERN stack web application with geospatial water mapping, historical timeline tracking, and administrative user roles.
+  </li>
+  <li>
+    <strong>Conversational AI Integration:</strong> Integration of high-efficiency reasoning models (via Groq/Gemini APIs) enabling voice and text queries in Hindi for grassroots accessibility.
+  </li>
+</ul>
+
+<h3 class="subsection-header">5.3 Out-of-Scope Boundaries</h3>
+<ul>
+  <li>
+    The system does not claim or attempt molecular heavy-metal trace analysis (Arsenic, Fluoride, Mercury) on the low-cost edge unit; such parameters are flagged for formal laboratory referral.
+  </li>
+  <li>
+    The system provides decision support and advisory guidance, complementing—not replacing—certified public health laboratories.
+  </li>
+</ul>
+
+<div class="page-break"></div>
+
+<!-- PAGE 6: MODULES & WORKFLOW -->
+<style>
+  .page-6-container {
+    font-size: 10pt;
+    line-height: 1.38;
+  }
+  .page-6-container h3.subsection-header {
+    margin-top: 7px;
+    margin-bottom: 3px;
+    font-size: 11pt;
+  }
+  .page-6-container p {
+    margin-bottom: 4pt;
+  }
+  .page-6-container ul {
+    margin-bottom: 5pt;
+    padding-left: 18px;
+  }
+  .page-6-container li {
+    margin-bottom: 2pt;
+  }
+</style>
+<div class="page-6-container">
+
+<h2 class="section-header">6. Modules of the Project & System Workflow</h2>
+
+<h3 class="subsection-header">6.1 Edge Sensing & Hardware Processing Module</h3>
+<p>
+  This module forms the physical interface of the system. The ESP32 coordinates sampling across the four sensor subsystems. An external 16-bit ADS1115 Analog-to-Digital Converter connected via I2C resolves the voltage limitations and non-linearities of the ESP32 internal ADC. Raw analog voltages are transformed into scientific units (pH, ppm, NTU) using empirical calibration formulas adjusted for water temperature.
+</p>
+
+<h3 class="subsection-header">6.2 Local Human-Machine Interface (HMI) Module</h3>
+<p>
+  To ensure immediate utility at rural borewells without smartphone dependency, the hardware includes a dual-color 0.96" I2C OLED display, an active piezo buzzer, and a DFPlayer Mini voice module. Test results are categorized into three levels:
+</p>
+<ul>
+  <li><strong>Safe (हरा / Green):</strong> pH 6.5 to 8.5, TDS below 300 ppm, Turbidity below 1.0 NTU.</li>
+  <li><strong>Permissible (पीला / Yellow):</strong> pH 6.5 to 8.5, TDS 300 to 500 ppm, Turbidity 1.0 to 5.0 NTU.</li>
+  <li><strong>Unsafe (लाल / Red):</strong> Any parameter exceeding BIS IS 10500 permissible limits. A warning tone is sounded, and the display flashes <em>"असुरक्षित / पिएं मत"</em>.</li>
+</ul>
+
+<h3 class="subsection-header">6.3 Cloud Telemetry & Data Management Module</h3>
+<p>
+  Data packets structured in compact JSON are dispatched via HTTP POST over Wi-Fi / GSM tethering to the Node.js/Express server. The backend validates schema constraints, records GPS metadata, updates MongoDB collections, and pushes live updates to the frontend via WebSockets.
+</p>
+
+<h3 class="subsection-header">6.4 Conversational AI Advisor Module</h3>
+<p>
+  Operating similarly to conversational AI assistants, this module ingests the user's natural language voice or text question in rural Hindi or English. The agent leverages autonomous function calling:
+</p>
+<ul>
+  <li><code>get_latest_water_report(village_id)</code>: Retrieves real-time sensor values from MongoDB.</li>
+  <li><code>analyze_water_trends(village_id, durationDays)</code>: Detects sudden quality drops or seasonal spikes.</li>
+  <li><code>generate_remediation_guidance(parameters)</code>: Formulates practical, affordable local remediation steps.</li>
+</ul>
+
+<div class="agent-box">
+  <div style="font-weight: bold; color: #0369a1; margin-bottom: 5px; font-size: 9.5pt; text-transform: uppercase;">
+    Autonomous Agent Tool-Calling Example (Live Citizen Interaction):
+  </div>
+  <p style="margin-bottom: 5px; font-size: 10pt;">
+    <strong>Villager (via App / Web / Voice in Hindi):</strong><br>
+    <em>"हमारा पानी थोड़ा पीला दिख रहा है और स्वाद खारा है, क्या हम इसे बच्चों को पिला सकते हैं?"</em>
+  </p>
+  <div style="background-color: #f1f5f9; padding: 5px 8px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 9pt; margin-bottom: 5px; color: #0f172a;">
+    1. Agent invokes tool: <code>get_latest_water_report(village_id="Bijnor_Ward_4")</code><br>
+    2. Tool returns: <code>{ ph: 8.6, tds: 680, turbidity: 7.4, temp_c: 24.2 }</code><br>
+    3. Agent evaluates limits against BIS IS 10500 standards and synthesizes Hindi advisory.
+  </div>
+  <p style="margin-bottom: 0; font-size: 10pt; color: #1e293b;">
+    <strong>Agent Response (Spoken / Displayed in Hindi):</strong><br>
+    <span style="color: #b91c1c; font-weight: bold;">"❌ सलाह: यह पानी अभी छोटे बच्चों के लिए सुरक्षित नहीं है।</span><br>
+    आपके वार्ड के सेंसर के अनुसार पानी में गंदलापन (Turbidity: 7.4 NTU) और खारापन (TDS: 680 ppm) सामान्य सीमा से अधिक है।<br>
+    • <strong>क्या करें:</strong> पानी को तुरंत फिटकरी (Alum) से साफ करें या बालू-कोयला फिल्टर से छानें।<br>
+    • <strong>सावधानी:</strong> केवल उबालने से खारापन कम नहीं होगा। हमने ग्राम प्रधान और जल निगम पोर्टल को स्वचालित जांच सूचना भेज दी है।"
+  </p>
+</div>
+
+</div>
+
+<div class="page-break"></div>
+
+<!-- PAGE 7: VERIFICATION & CALIBRATION -->
+<h2 class="section-header">7. Verification, Calibration & Remediation Mechanism</h2>
+
+<h3 class="subsection-header">7.1 Multi-Point Sensor Calibration & Temperature Compensation</h3>
+<p>
+  Electrolytic conductivity and electrochemical potential drift significantly with temperature (approximately 2% per °C). The system executes active mathematical temperature compensation:
+</p>
+
+<div class="formula-box">
+  TDS_compensated = TDS_raw / [1.0 + 0.02 × (T_water - 25.0°C)]
+</div>
+
+<p>
+  Two-point buffer calibration (pH 4.01 and pH 6.86) is performed using standard laboratory reagents, storing calibration slope and offset values into non-volatile EEPROM storage.
+</p>
+
+<h3 class="subsection-header">7.2 AI-Based Anomaly Detection & Quality Control</h3>
+<p>
+  The backend AI engine continuously monitors incoming data streams for statistical anomalies. If a village well reports sudden spikes in turbidity alongside abnormal TDS within a 24-hour period, the system flags the event as potential floodwater ingress or sewage contamination, triggering automatic verification alerts.
+</p>
+
+<h3 class="subsection-header">7.3 Ground-Truth Cross-Referencing Protocol</h3>
+<p>
+  To maintain high data integrity, sample readings gathered by student field investigators are periodically cross-verified against standard laboratory titration and benchtop spectrophotometer readings from institutional environmental laboratories.
+</p>
+
+<h3 class="subsection-header">7.4 Actionable Rural Remediation & Escalation Protocols</h3>
+<table class="data-table">
+  <thead>
+    <tr>
+      <th style="width: 25%;">Contamination Type</th>
+      <th style="width: 35%;">Sensor Signature</th>
+      <th style="width: 40%;">AI Vernacular Guidance / Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Suspended Silt / Mud</strong></td>
+      <td>Turbidity &gt; 5.0 NTU, Normal TDS and pH</td>
+      <td>Advise alum (फिटकरी) coagulation, sand-gravel filtration, and settling before boiling.</td>
+    </tr>
+    <tr>
+      <td><strong>High Mineral / Hardness</strong></td>
+      <td>TDS &gt; 700 ppm, pH &gt; 8.4</td>
+      <td>Advise against infant consumption; warn that boiling will not reduce mineral hardness; recommend alternate well.</td>
+    </tr>
+    <tr>
+      <td><strong>Acidic Water Runoff</strong></td>
+      <td>pH &lt; 6.5</td>
+      <td>Warn against pipe corrosion and metallic leaching; recommend immediate Jal Nigam inspection.</td>
+    </tr>
+    <tr>
+      <td><strong>Critical Multi-Hazard</strong></td>
+      <td>Abnormal pH, TDS &gt; 1000 ppm, Turbidity &gt; 15 NTU</td>
+      <td>Automatic SOS alert sent to Gram Pradhan and Jal Nigam portal to seal handpump for testing.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<!-- PAGE 8: SYSTEM FLOW DIAGRAM -->
+<h2 class="section-header">8. System Flow Diagram / Working of the Project</h2>
+<p>
+  The end-to-end working of the <strong>JalRakshak AI</strong> platform is illustrated in the architectural diagrams below, showcasing the integration between edge hardware, cloud intelligence, and vernacular user interfaces:
+</p>
+
+<div class="image-container">
+  <img src="file:///home/saurabh-kumar123/.gemini/antigravity-ide/brain/014c02b4-8afc-429c-8b69-412e4e722631/water_iot_system_architecture_1791307656300.jpg" alt="Technical System Architecture Diagram">
+  <div class="caption">Figure 8.1: Complete Technical System Flow Architecture — Hardware Edge, Cloud Backend, and AI Agent Layers.</div>
+</div>
+
+<div class="image-container" style="margin-top: 15px;">
+  <img src="file:///home/saurabh-kumar123/.gemini/antigravity-ide/brain/014c02b4-8afc-429c-8b69-412e4e722631/portable_water_device_prototype_1791307688874.jpg" alt="Handheld IoT Testing Device Prototype">
+  <div class="caption">Figure 8.2: 3D Render Prototype of the Handheld JalRakshak Edge Testing Device in Village Field Deployment.</div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- PAGE 9: TOOLS AND TECHNOLOGIES -->
+<h2 class="section-header">9. Tools and Technologies Used</h2>
+<p>
+  The project combines embedded hardware engineering, full-stack web development, and agentic artificial intelligence:
+</p>
+
+<h3 class="subsection-header">1. Embedded Hardware & Sensors</h3>
+<ul>
+  <li><strong>ESP32 Microcontroller:</strong> Dual-core Tensilica Xtensa 32-bit LX6 @ 240 MHz, integrated Wi-Fi (802.11 b/g/n) and BLE 4.2.</li>
+  <li><strong>ADS1115 ADC Module:</strong> 16-bit resolution, 4-channel analog-to-digital converter over I2C bus (address 0x48).</li>
+  <li><strong>pH Sensor Probe (pH-4502C + E-201-C):</strong> Composite glass BNC electrode with high-impedance amplifier circuit.</li>
+  <li><strong>Gravity Analog TDS Sensor (V1.0):</strong> Dual titanium probe with excitation circuit minimizing probe polarization.</li>
+  <li><strong>TS-300B Turbidity Sensor:</strong> Optical infrared emitter and phototransistor measuring light attenuation.</li>
+  <li><strong>DS18B20 Temperature Probe:</strong> Stainless steel waterproof digital probe (±0.5°C accuracy, 1-Wire interface).</li>
+  <li><strong>Display & Audio:</strong> 0.96" SSD1306 monochrome OLED and DFPlayer Mini MP3 audio module.</li>
+</ul>
+
+<h3 class="subsection-header">2. Backend & Cloud Infrastructure</h3>
+<ul>
+  <li><strong>Node.js & Express.js:</strong> Asynchronous event-driven RESTful API backend handling telemetry ingestion, payload validation, and CORS.</li>
+  <li><strong>MongoDB & Mongoose:</strong> Document-based database storing time-series sensor observations and geospatial coordinates with indexing.</li>
+  <li><strong>WebSocket (Socket.io):</strong> Real-time bi-directional event pipeline pushing sensor updates to connected dashboard clients.</li>
+</ul>
+
+<h3 class="subsection-header">3. Artificial Intelligence & Vernacular NLP</h3>
+<ul>
+  <li><strong>Language Models (LLMs):</strong> Groq API / Google Gemini 2.5 Flash executing function-calling tool workflows.</li>
+  <li><strong>Autonomous Agent Tool Framework:</strong> Python/JavaScript agent services coordinating database lookups and vernacular formatting.</li>
+  <li><strong>Speech Synthesis / Recognition:</strong> Web Speech API supporting spoken Hindi input and audio advisory playback.</li>
+</ul>
+
+<h3 class="subsection-header">4. Frontend Web & GIS Interface</h3>
+<ul>
+  <li><strong>React.js:</strong> Component-based single-page application for responsive data visualization.</li>
+  <li><strong>Tailwind CSS:</strong> Modern utility-first styling delivering clean, accessible interface design.</li>
+  <li><strong>Leaflet.js / OpenStreetMap:</strong> Geospatial rendering of water sources with color-coded safety markers across Uttar Pradesh.</li>
+</ul>
+
+<div class="page-break"></div>
+
+<!-- PAGE 10: ADVANTAGES & EXPECTED OUTCOMES -->
+<h2 class="section-header">10. Advantages / Expected Outcomes</h2>
+<p>
+  The implementation of <strong>JalRakshak AI</strong> offers substantial technological, public health, and governance benefits:
+</p>
+
+<h3 class="subsection-header">10.1 Key Technological Advantages</h3>
+<ul>
+  <li>
+    <strong>Drastic Cost Reduction:</strong> The total bill of materials for the hardware prototype is under <strong>₹3,900</strong>, compared to commercial multi-parameter water testing kits that cost upwards of ₹60,000 to ₹1,50,000.
+  </li>
+  <li>
+    <strong>Democratized Vernacular Accessibility:</strong> By providing instant audio-visual guidance in spoken Hindi, the system completely overcomes the literacy and technical barriers that prevent villagers from utilizing laboratory reports.
+  </li>
+  <li>
+    <strong>Zero-Downtime Offline Resilience:</strong> The device operates in remote rural fields lacking Wi-Fi or cellular coverage by caching observations locally and uploading in batch mode when connected.
+  </li>
+</ul>
+
+<h3 class="subsection-header">10.2 Expected Societal & Public Health Outcomes</h3>
+<ul>
+  <li>
+    <strong>Early Warning Against Water-Borne Outbreaks:</strong> Immediate detection of turbidity and TDS anomalies prevents community consumption of contaminated floodwater or sewage runoff, reducing cases of cholera, dysentery, and acute diarrheal diseases.
+  </li>
+  <li>
+    <strong>Actionable Remediation Guidance:</strong> Villagers receive concrete, affordable instructions (e.g., proper alum dosage, boiling instructions, water source diversion) rather than confusing numerical data.
+  </li>
+  <li>
+    <strong>Empowerment of Rural Health Workers:</strong> Equips village ASHA workers and Gram Panchayat committees with an intuitive diagnostic tool for periodic community well auditing.
+  </li>
+</ul>
+
+<h3 class="subsection-header">10.3 Governance & Policy Impacts</h3>
+<ul>
+  <li>
+    <strong>Granular Geospatial Water Quality Database:</strong> Generates a live, crowd-sourced digital water map of rural Uttar Pradesh for researchers, the Department of Science and Technology, and Jal Nigam engineers.
+  </li>
+  <li>
+    <strong>Data-Driven Resource Allocation:</strong> Enables state authorities to prioritize water filter installations and pipeline repairs in the most vulnerable contamination clusters.
+  </li>
+</ul>
+
+<div class="page-break"></div>
+
+<!-- PAGE 11: CONCLUSION -->
+<h2 class="section-header">11. Conclusion</h2>
+<p>
+  The <strong>JalRakshak AI</strong> project delivers an end-to-end, indigenous technological solution tailored specifically to the environmental and public health realities of rural Uttar Pradesh. By bridging the gap between affordable embedded IoT hardware, modern cloud web engineering, and multilingual conversational artificial intelligence, the platform transforms drinking water safety from a passive, delayed laboratory procedure into an active, community-driven early warning system.
+</p>
+<p>
+  The project strictly respects practical engineering boundaries: it clearly identifies its scope as an early-warning screening tool for general physicochemical parameters (pH, TDS, turbidity, temperature), while establishing an automated referral bridge for certified laboratory investigations when anomalies occur.
+</p>
+<p>
+  Developed under the engineering student initiative of the Council of Science and Technology, Uttar Pradesh (CST UP), <strong>JalRakshak AI</strong> embodies the principles of frugal innovation, grassroots empowerment, and state-of-the-art technological rigor. It stands ready to safeguard rural communities, support public health administration, and contribute meaningfully to the vision of a healthier, digitally empowered Uttar Pradesh.
+</p>
+
+<div style="margin-top: 40px; border-top: 1px solid #777; padding-top: 14px;">
+  <table style="width: 100%; border: none;">
+    <tr style="border: none;">
+      <td style="width: 50%; border: none; font-size: 11pt;">
+        <strong>Saurabh Kumar</strong><br>
+        B.Tech Computer Science & Engineering (Final Year)<br>
+        R V Institute of Technology, Bijnor (AKTU Code: 501)<br>
+        Date: October 6, 2026
+      </td>
+      <td style="width: 50%; border: none; text-align: right; font-size: 11pt;">
+        <strong>Project Supervisor / HOD</strong><br>
+        Department of Computer Science & Engineering<br>
+        R V Institute of Technology, Bijnor (U.P.)<br>
+        Seal & Signature
+      </td>
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>
